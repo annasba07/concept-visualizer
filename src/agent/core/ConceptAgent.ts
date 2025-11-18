@@ -15,7 +15,6 @@ import {
   AgentConfig,
   ConceptVisualizationResult,
   TaskPlan,
-  ReActState,
   Checkpoint,
   VisualizationOutput,
   Explanation,
@@ -267,8 +266,8 @@ export class ConceptAgent {
    */
   private async designStrategy(
     concept: any,
-    research: ResearchFindings,
-    options?: any
+    _research: ResearchFindings,
+    _options?: any
   ): Promise<VisualizationStrategy> {
     // Thought: Analyze concept type and select appropriate visualization
     const typeMapping: Record<string, any> = {
@@ -367,7 +366,7 @@ Rate from 0-1 (1 being perfect). Return only a number.`;
   private async createExplanation(
     concept: any,
     research: ResearchFindings,
-    visualizations: VisualizationOutput[]
+    _visualizations: VisualizationOutput[]
   ): Promise<Explanation> {
     const prompt = `Create a clear explanation for the concept: "${concept.input}"
 

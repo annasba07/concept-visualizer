@@ -10,7 +10,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import {
   Concept,
-  ConceptType,
   ComplexityLevel,
   TaskNode,
   TaskPlan,
